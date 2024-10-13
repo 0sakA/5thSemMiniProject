@@ -89,7 +89,9 @@ const PoliticianProfile = () => {
       <ul>
         {news.map(article => (
           <li key={article.url}>
-            <h3>{article.title}</h3>
+            <a href={article.url} target="_blank" rel="noopener noreferrer">
+              <h3>{article.title}</h3>
+            </a>
             <p>Votes: {article.votes || 0}</p>
             <button onClick={() => handleUpvote(article.url)}>Upvote</button>
             <button onClick={() => handleDownvote(article.url)}>Downvote</button>
